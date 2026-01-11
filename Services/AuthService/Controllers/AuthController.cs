@@ -5,6 +5,8 @@ using AuthService.DTOs;
 using AuthService.Models;
 using AuthService.Services;
 using BCrypt.Net;
+using Microsoft.AspNetCore.RateLimiting;
+
 
 namespace AuthService.Controllers;
 
@@ -21,6 +23,7 @@ public class AuthController : ControllerBase
         _jwtService = jwtService;
     }
 
+    [EnableRateLimiting("auth")]
     [HttpPost("register")]
     public async Task<ActionResult<AuthResponseDto>> Register(RegisterDto registerDto)
     {
@@ -70,6 +73,7 @@ public class AuthController : ControllerBase
         });
     }
 
+    [EnableRateLimiting("auth")]
     [HttpPost("login")]
     public async Task<ActionResult<AuthResponseDto>> Login(LoginDto loginDto)
     {

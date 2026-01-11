@@ -1,14 +1,21 @@
 using AuthService.Middleware;
 using CommunicationService.Data;
+using CommunicationService.Validators;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Threading.RateLimiting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddControllers();
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<ContactSubmissionCreateDtoValidator>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -54,7 +61,20 @@ Console.WriteLine("Connection string: " + builder.Configuration.GetConnectionStr
 
 
 
-
+builder.Services.AddRateLimiter(options =>
+{
+    // Contact form rate limit: 3 submissions per hour per IP
+    options.AddPolicy("contact", httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: partition => new FixedWindowRateLimiterOptions
+            {
+                AutoReplenishment = true,
+                PermitLimit = 3,
+                QueueLimit = 0,
+                Window = TimeSpan.FromHours(1)
+            }));
+});
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -93,5 +113,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.MapHealthChecks("/health");
+app.UseRateLimiter();
 
 app.Run();

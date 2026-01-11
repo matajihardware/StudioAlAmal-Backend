@@ -1056,3 +1056,26 @@ Example response:
 
 
 This ensures a clean, predictable API behavior and makes debugging much easier during development.
+
+****
+
+
+Health Check Endpoints
+Each service exposes a /health endpoint to verify that it is running and can connect to its database. This helps monitor service availability and readiness. Connections now use the LocalDB instance pipe name to ensure EF Core can reliably connect in development. Example: GET /health → Healthy.
+
+****
+
+Validation:
+All incoming DTOs are validated using FluentValidation to ensure required fields, proper formats, and constraints (e.g., email format, password strength, max lengths). This prevents invalid data from reaching the database or business logic.
+
+Rate Limiting:
+Rate limiting is applied globally and on sensitive endpoints to prevent abuse:
+
+AuthService: max 5 login/register requests per minute per IP
+
+CommunicationService: max 3 contact form submissions per hour per IP
+
+All services: global limit of 100 requests per minute per user/IP
+
+This protects the APIs from brute-force attacks, spam, and overuse.
+

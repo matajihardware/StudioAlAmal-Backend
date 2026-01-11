@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using CommunicationService.Data;
 using CommunicationService.DTOs;
 using CommunicationService.Models;
+using Microsoft.AspNetCore.RateLimiting;
+
 
 namespace CommunicationService.Controllers;
 
@@ -18,7 +20,7 @@ public class ContactController : ControllerBase
         _context = context;
     }
 
-    // POST: api/Contact (Public - no auth needed)
+    [EnableRateLimiting("contact")]
     [HttpPost]
     public async Task<ActionResult<ContactSubmissionResponseDto>> SubmitContactForm(
         ContactSubmissionCreateDto submissionDto)
